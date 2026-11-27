@@ -1,0 +1,133 @@
+{
+  "config": {
+    "total_time_minutes": 120,
+    "total_compute": 10,
+    "action_costs": {
+      "debug": {
+        "time": 10,
+        "compute": 1
+      },
+      "train": {
+        "time": 25,
+        "compute": 3
+      },
+      "run_normal": {
+        "time": 15,
+        "compute": 2
+      },
+      "run_hard": {
+        "time": 20,
+        "compute": 2
+      },
+      "organize": {
+        "time": 10,
+        "compute": 0
+      },
+      "write_report": {
+        "time": 15,
+        "compute": 0
+      },
+      "submit": {
+        "time": 0,
+        "compute": 0
+      }
+    },
+    "train_failure_prob_no_debug": 0.35,
+    "train_failure_prob_with_debug": 0.05,
+    "experiment_failure_prob": 0.1,
+    "score_base": 0.58,
+    "score_bonus_if_a_better": 0.14,
+    "result_noise_std": 0.12,
+    "results_per_track": 12,
+    "coverage_target": 2,
+    "model_required": true,
+    "report_required": true,
+    "organize_required": true,
+    "weights": {
+      "truth": 0.6,
+      "model": 0.15,
+      "report": 0.1,
+      "organize": 0.05,
+      "coverage": 0.1
+    },
+    "auxiliary_progress_reward": 0.05,
+    "illegal_action_penalty": 0.1,
+    "reward_decimals": 4
+  },
+  "splits": {
+    "train": {
+      "count": 24,
+      "file": "train.jsonl",
+      "seed_range": [
+        1000,
+        1023
+      ],
+      "scenario_ids": [
+        "train-0000",
+        "train-0001",
+        "train-0002",
+        "train-0003",
+        "train-0004",
+        "train-0005",
+        "train-0006",
+        "train-0007",
+        "train-0008",
+        "train-0009",
+        "train-0010",
+        "train-0011",
+        "train-0012",
+        "train-0013",
+        "train-0014",
+        "train-0015",
+        "train-0016",
+        "train-0017",
+        "train-0018",
+        "train-0019",
+        "train-0020",
+        "train-0021",
+        "train-0022",
+        "train-0023"
+      ]
+    },
+    "val": {
+      "count": 8,
+      "file": "val.jsonl",
+      "seed_range": [
+        2000,
+        2007
+      ],
+      "scenario_ids": [
+        "val-0000",
+        "val-0001",
+        "val-0002",
+        "val-0003",
+        "val-0004",
+        "val-0005",
+        "val-0006",
+        "val-0007"
+      ]
+    },
+    "test": {
+      "count": 12,
+      "file": "test.jsonl",
+      "seed_range": [
+        3000,
+        3011
+      ],
+      "scenario_ids": [
+        "test-0000",
+        "test-0001",
+        "test-0002",
+        "test-0003",
+        "test-0004",
+        "test-0005",
+        "test-0006",
+        "test-0007",
+        "test-0008",
+        "test-0009",
+        "test-0010",
+        "test-0011"
+      ]
+    }
+  }
+}
